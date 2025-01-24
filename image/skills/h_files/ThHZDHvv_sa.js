@@ -1,0 +1,4 @@
+;/*FB_PKG_DELIM*/
+
+__d("useEffectOnce",["react"],(function(a,b,c,d,e,f,g){"use strict";var h,i=(h||d("react")).useEffect;function a(a){return i(a,[])}g["default"]=a}),98);
+__d("useTimeout",["clearTimeout","react","setTimeout","useEffectOnce","useUnsafeRef_DEPRECATED"],(function(a,b,c,d,e,f,g){"use strict";var h,i;b=i||d("react");var j=b.useCallback,k=b.useState;function a(a,b){b===void 0&&(b=!0);var d=(h||(h=c("useUnsafeRef_DEPRECATED")))(null),e=k(b),f=e[0],g=e[1],i=j(function(){g(!1),c("clearTimeout")(d.current)},[]),l=j(function(){g(!0),d.current=c("setTimeout")(function(){g(!1)},a)},[a]);e=j(function(){c("clearTimeout")(d.current),l()},[l]);c("useEffectOnce")(function(){b&&l();return i});return{pending:f,clear:i,restart:e}}g["default"]=a}),98);
