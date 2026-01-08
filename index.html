@@ -1,231 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>William Ndatimana - Web Developer Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="./image/184-1841477_software-mobile-applications-web-development-web-developer-icon-png.png" />
-  <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-</head>
-<body>
-  <section class="content-wrapper">
-    <!-- TOP SECTION -->
-    <div class="top">
-      <img class="myPhoto" src="./image/William.jpg" alt="My profile picture" />
-    </div>
-
-    <!-- MIDDLE SECTION -->
-    <div class="middle">
-      <h1 class="heading">
-        <span class="title-part1">Hi I'm William,</span>
-        <span class="title-part2">I'm a web developer</span>
-      </h1>
-      <p class="Desc">
-        NDATIMANA William is a front-end developer and WordPress CMS expert with over 2 years of experience. 
-        With a strong background in creating visually appealing and user-friendly websites, I specialize in HTML, CSS, JavaScript, PHP, React, Next.js, React Native, and TYPO3 CMS.
-      </p>
-    </div>
-
-    <!-- BOTTOM NAV -->
-    <div class="bottom">
-      <nav class="navigation">
-        <ul class="nav-list">
-          <li><a class="intro-button">Intro</a></li>
-          <li><a class="work-button">Work</a></li>
-          <li><a class="about-button">About</a></li>
-          <li><a class="contact-button">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <!-- MAIN CONTENT SECTIONS -->
-    <div id="main">
-      <!-- INTRO -->
-      <div id="intro" class="wrapper">
-        <i class="fa-solid fa-x close-btn"></i>
-        <h1 class="intro-heading">Intro</h1>
-        <span class="image"><img src="./image/web-devel-important.jpg" alt="Web Development" /></span>
-        <div class="info-description">
-          <p>Hello, I'm NDATIMANA William, a passionate and driven web developer based in Kigali, Rwanda. My portfolio showcases innovative solutions and projects I have developed.</p>
-          <h2>About Me</h2>
-          <p>From a young age, I've been fascinated by technology. This passion led me to pursue web development, combining creativity with technical expertise.</p>
-          <h2>My Skills</h2>
-          <ul>
-            <li>Front-End Development: HTML, CSS, JavaScript</li>
-            <li>Back-End Development: PHP</li>
-            <li>Frameworks and Libraries: React, Bootstrap</li>
-            <li>Database Management: MySQL</li>
-            <li>Version Control: Git, GitHub</li>
-            <li>Tools and Platforms: VS Code, Linux</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>William Ndatimana - Web Developer Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./image/184-1841477_software-mobile-applications-web-development-web-developer-icon-png.png"
+    />
+  </head>
+  <body>
+    <section class="content-wrapper">
+      <div class="top">
+        <img class="myPhoto" src="./image/William.jpg" alt="My profile picture" />
+      </div>
+      <div class="middle">
+        <h1 class="heading">
+          <span class="title-part1">Hi I'm William,</span>
+          <span class="title-part2">I'm a web developer</span>
+        </h1>
+        <p class="Desc">
+          NDATIMANA William is a front-end developer and WordPress CMS expert with over 2 years of experience. With a strong background in 
+          creating visually appealing and user-friendly websites, I specialize in HTML, CSS, JavaScript, PHP, React, Next.js, React Native, and TYPO3 CMS.
+        </p>
+      </div>
+      <div class="bottom">
+        <nav class="navigation">
+          <ul class="nav-list">
+            <li><a class="intro-button">Intro</a></li>
+            <li><a class="work-button">Work</a></li>
+            <li><a class="about-button">About</a></li>
+            <li><a class="contact-button">Contact</a></li>
           </ul>
-          <h2>My Approach</h2>
-          <ul>
-            <li>User-Centric Design: Prioritizing user experience.</li>
-            <li>Responsive Design: Accessible on all devices.</li>
-            <li>Performance Optimization: Clean, efficient code.</li>
-            <li>Collaboration: Working closely with clients and teams.</li>
-          </ul>
-          <h2>What I Offer</h2>
-          <ul>
-            <li>Web Development: Dynamic and responsive websites.</li>
-            <li>Web Design: User-friendly and visually appealing interfaces.</li>
-            <li>E-Commerce Solutions: Secure and scalable online stores.</li>
-            <li>Content Management Systems: Easy-to-manage CMS solutions.</li>
-          </ul>
-          <h2>Let's Connect</h2>
-          <p>Feel free to <a class="contact-button">contact me</a> for any questions or projects.</p>
-        </div>
+        </nav>
       </div>
 
-      <!-- WORK SECTION -->
-      <div id="work" class="wrapper">
-        <i class="fa-solid fa-x close-btn"></i>
-        <h1 class="intro-heading">Work</h1>
-        <div class="image"><img src="./image/web-devel-important.jpg" alt="Web Development Work" /></div>
-        <div class="work-intro">
-          <p>Here you'll find my projects highlighting creativity, problem-solving, and innovation.</p>
+      <!-- Main Content -->
+      <div id="main">
+        <!-- Intro Section -->
+        <div id="intro" class="wrapper">
+          <i class="fa-solid fa-x close-btn"></i>
+          <h1 class="intro-heading">Intro</h1>
+          <span class="image">
+            <img src="./image/web-devel-important.jpg" alt="Web Development" />
+          </span>
+          <div class="info-description">
+            <!-- Your Intro Text Here -->
+            <p>Hello, I'm NDATIMANA William, a passionate and driven web developer based in Kigali, Rwanda. With a solid foundation in HTML, CSS, and JavaScript, I specialize in creating engaging and efficient web applications.</p>
+            <h2>About Me</h2>
+            <p>From a young age, I've been fascinated by technology...</p>
+            <h2>My Skills</h2>
+            <ul>
+              <li>Front-End Development: HTML, CSS, JavaScript</li>
+              <li>Back-End Development: PHP</li>
+              <li>Frameworks and Libraries: React, Bootstrap</li>
+              <li>Database Management: MySQL</li>
+              <li>Version Control: Git, GitHub</li>
+              <li>Tools and Platforms: VS Code, Linux</li>
+            </ul>
+            <h2>My Approach</h2>
+            <ul>
+              <li>User-Centric Design: Prioritizing the user experience in every project.</li>
+              <li>Responsive Design: Ensuring websites are accessible on all devices.</li>
+              <li>Performance Optimization: Writing clean, efficient code for fast load times.</li>
+              <li>Collaboration: Working closely with clients and team members to achieve project goals.</li>
+            </ul>
+            <h2>Let's Connect</h2>
+            <p>I'm always excited to connect with like-minded professionals. Feel free to <a class="contact-button">contact me</a>.</p>
+          </div>
         </div>
-        <!-- Add your project cards here, same as original -->
-      </div>
 
-      <!-- ABOUT SECTION -->
-      <div id="about" class="wrapper">
-        <i class="fa-solid fa-x close-btn"></i>
-        <h1 class="intro-heading">About</h1>
-        <div class="profile">
-          <div class="profile-picture">
-            <img class="profile-icon" src="./image/programmer-line-gradient-icon-vector-removebg-preview.png" alt="Web developer icon" />
-          </div>
+        <!-- Work Section -->
+        <div id="work" class="wrapper">
+          <i class="fa-solid fa-x close-btn"></i>
+          <h1 class="intro-heading">Work</h1>
+          <!-- Work Content Here (Keep your existing cards & images) -->
         </div>
-        <div class="skills">
-          <div class="brief">
-            <p>Frontend developer with extensive experience in WordPress and passion for creating engaging user experiences.</p>
-          </div>
-          <div class="tools">
-            <!-- Your skills columns as before -->
-          </div>
-        </div>
-      </div>
 
-      <!-- CONTACT SECTION -->
-      <div id="contact" class="wrapper">
-        <i class="fa-solid fa-x close-btn"></i>
-        <h1 class="intro-heading">Contact</h1>
-        <form id="contact-form" class="contact-form">
-          <div class="form-field-wrapper">
-            <div class="half-fields">
-              <div class="field-half1">
-                <label for="userName">Name</label>
-                <input type="text" name="name" id="userName" required />
+        <!-- About Section -->
+        <div id="about" class="wrapper">
+          <i class="fa-solid fa-x close-btn"></i>
+          <h1 class="intro-heading">About</h1>
+          <!-- Your About Content Here -->
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="wrapper">
+          <i class="fa-solid fa-x close-btn"></i>
+          <h1 class="intro-heading">Contact</h1>
+          <form id="contact-form" class="contact-form">
+            <div class="form-field-wrapper">
+              <div class="half-fields">
+                <div class="field-half1">
+                  <label for="userName">Name</label>
+                  <input type="text" name="name" id="userName" required />
+                </div>
+                <div class="field-half">
+                  <label for="userEmail">Email</label>
+                  <input type="email" name="email" id="userEmail" required />
+                </div>
               </div>
-              <div class="field-half">
-                <label for="userEmail">Email</label>
-                <input type="email" name="email" id="userEmail" required />
+
+              <div class="textarea-wrapper">
+                <label for="userMessage">Message</label>
+                <textarea name="message" id="userMessage" required></textarea>
+              </div>
+
+              <div class="button-wrapper">
+                <input id="submit" type="submit" value="Send Message" />
+                <input id="reset" type="button" value="Reset" />
+              </div>
+
+              <div class="socials">
+                <ul>
+                  <li><a href="https://www.linkedin.com/in/william-ndatimana-509931253/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="https://github.com/NDATIMANAWILLIAM" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                  <li><a href="https://www.instagram.com/williamwale2244" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
               </div>
             </div>
-            <div class="textarea-wrapper">
-              <label for="userMessage">Message</label>
-              <textarea name="message" id="userMessage" required></textarea>
-            </div>
-            <div class="button-wrapper">
-              <input id="submit" type="submit" value="Send Message" />
-              <input id="reset" type="button" value="Reset" />
-            </div>
-            <div class="socials">
-              <ul>
-                <li><a href="https://www.linkedin.com/in/william-ndatimana-509931253/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                <li><a href="https://github.com/NDATIMANAWILLIAM" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                <li><a href="https://www.instagram.com/williamwale2244" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <!-- FOOTER -->
-    <div class="footer">
-      <p>&copy; 2025 by NDATIMANA William. All rights reserved.</p>
-    </div>
-  </section>
+      <div class="footer">
+        <p>&copy; 2025 by NDATIMANA William. All rights reserved.</p>
+      </div>
+    </section>
 
-  <!-- BACKGROUND -->
-  <div id="bg"></div>
+    <div id="bg"></div>
 
-  <!-- MAIN JS -->
-  <script>
-    // EmailJS Initialization
-    emailjs.init('YOUR_PUBLIC_KEY'); // replace with your EmailJS public key
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const introButton = document.querySelector(".intro-button");
-      const workButton = document.querySelector(".work-button");
-      const aboutButton = document.querySelector(".about-button");
-      const contactButton = document.querySelector(".contact-button");
-      const mainWrapper = document.querySelector(".content-wrapper");
-      const getMainContainer = document.getElementById("main");
-      const closeButton = document.querySelectorAll(".fa-x");
-      const bg = document.getElementById("bg");
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init("BGI5QDs9hZrRAsjn_"); // your public key
+      })();
 
       const contactForm = document.getElementById('contact-form');
-      const resetButton = document.getElementById('reset');
+      const resetBtn = document.getElementById('reset');
 
-      const childrenArray = Array.from(getMainContainer.children);
+      contactForm.addEventListener('submit', function(event){
+        event.preventDefault();
 
-      // Hide all main sections initially
-      childrenArray.forEach(child => child.style.display = 'none');
+        const params = {
+          from_name: document.getElementById('userName').value,
+          email_id: document.getElementById('userEmail').value,
+          message: document.getElementById('userMessage').value
+        };
 
-      const groupedElements = [document.querySelector(".top"), document.querySelector(".middle"), document.querySelector(".bottom"), document.querySelector(".footer")];
-      groupedElements[0].classList.add("move-up");
-      groupedElements[1].classList.add("show");
-
-      function hideContent() {
-        getMainContainer.style.opacity = "0";
-        bg.classList.remove("blur-effect");
-        mainWrapper.style.paddingBottom = "0";
-        groupedElements.forEach(el => { el.style.transform = "scale(1)"; el.style.opacity = "1"; });
-        childrenArray.forEach(child => child.style.display = 'none');
-      }
-
-      function showSection(index) {
-        getMainContainer.style.opacity = "1";
-        bg.classList.add("blur-effect");
-        groupedElements.forEach(el => { el.style.transform = "scale(0.7)"; el.style.opacity = "0"; });
-        childrenArray[index].style.display = "block";
-        mainWrapper.style.paddingBottom = (index === 3 ? "100px" : "300px");
-      }
-
-      introButton.addEventListener("click", () => showSection(0));
-      workButton.addEventListener("click", () => showSection(1));
-      aboutButton.addEventListener("click", () => showSection(2));
-      contactButton.addEventListener("click", () => showSection(3));
-
-      closeButton.forEach(btn => btn.addEventListener("click", hideContent));
-      bg.addEventListener("click", hideContent);
-
-      resetButton.addEventListener('click', () => contactForm.reset());
-
-      // Contact form submission
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const from_name = document.getElementById('userName').value.trim();
-        const email_id = document.getElementById('userEmail').value.trim();
-        const message = document.getElementById('userMessage').value.trim();
-
-        if (!from_name || !email_id || !message) { alert('Please fill in all fields.'); return; }
-
-        emailjs.send('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID', { from_name, email_id, message })
-          .then(() => { alert('SUCCESS! Your message has been sent.'); contactForm.reset(); })
-          .catch(err => { console.error('EmailJS error:', err); alert('FAILED... Please try again later.'); });
+        emailjs.send('service_khpotcs', 'template_jifb9tw', params)
+          .then(function(){
+            alert('SUCCESS! Your message has been sent.');
+            contactForm.reset();
+          }, function(error){
+            alert('FAILED... Please try again later.');
+            console.error('EmailJS error:', error);
+          });
       });
-    });
-  </script>
-</body>
+
+      resetBtn.addEventListener('click', () => contactForm.reset());
+    </script>
+  </body>
 </html>
