@@ -1,26 +1,22 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Collect form data
-  $name = htmlspecialchars($_POST['name']);
-  $email = htmlspecialchars($_POST['email']);
-  $message = htmlspecialchars($_POST['message']);
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-  // Email details
-  $to = 'ndatimanawilliam096@gmail.com'; // Replace with your email address
-  $subject = 'New Contact Form Submission';
-  $headers = "From: $email" . "\r\n" .
-    "Reply-To: $email" . "\r\n" .
-    "X-Mailer: PHP/" . phpversion();
+    $name = $_POST['name'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $message = $_POST['message'] ?? '';
 
-  // Email content
-  $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+    $to = "ndatimanawilliam096@gmail.com";
+    $subject = "New Contact Message";
 
-  // Send email
-  if (mail($to, $subject, $body, $headers)) {
-    echo 'Email successfully sent.';
-  } else {
-    echo 'Email sending failed.';
-  }
-} else {
-  echo 'Invalid request method.';
+    $headers = "From: Website <no-reply@yourdomain.com>\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8";
+
+    $body = "Name: $name\nEmail: $email\n\n$message";
+
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Message sent";
+    } else {
+        echo "Mail failed";
+    }
 }
