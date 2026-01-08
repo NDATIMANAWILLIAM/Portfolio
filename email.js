@@ -1,11 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-  emailjs.init("BGI5QDs9hZrRAsjn_"); // Your EmailJS public key
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize EmailJS
+  emailjs.init("BGI5QDs9hZrRAsjn_"); // Your public key
 
   const contactForm = document.getElementById('contact-form');
   const resetBtn = document.getElementById('reset');
 
-  contactForm.addEventListener('submit', function(event) {
-    event.preventDefault();
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
 
     const params = {
       from_name: document.getElementById('userName').value,
@@ -14,16 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     emailjs.send('service_73c09rg', 'template_jifb9tw', params)
-      .then(function() {
+      .then(() => {
         alert('SUCCESS! Your message has been sent.');
         contactForm.reset();
-      }, function(error) {
+      })
+      .catch((err) => {
         alert('FAILED... Please try again later.');
-        console.error('Email error:', error);
+        console.error(err);
       });
   });
 
-  resetBtn.addEventListener('click', function() {
-    contactForm.reset();
-  });
+  resetBtn.addEventListener('click', () => contactForm.reset());
 });
