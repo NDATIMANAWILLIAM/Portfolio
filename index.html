@@ -6,6 +6,7 @@
   <title>William Ndatimana - Web Developer Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
@@ -22,7 +23,8 @@
         <span class="title-part2">I'm a web developer</span>
       </h1>
       <p class="Desc">
-        NDATIMANA William is a front-end developer and WordPress CMS expert with over 2 years of experience. With a strong background in creating visually appealing and user-friendly websites, I specialize in HTML, CSS, JavaScript, PHP, React, Next.js, React Native, and TYPO3 CMS.
+        NDATIMANA William is a front-end developer and WordPress CMS expert with over 2 years of experience. With a strong background in 
+        creating visually appealing and user-friendly websites, I specialize in HTML, CSS, JavaScript, PHP, React, Next.js, React Native, and TYPO3 CMS.
       </p>
     </div>
     <div class="bottom">
@@ -45,9 +47,9 @@
           <img src="./image/web-devel-important.jpg" alt="Web Development" />
         </span>
         <div class="info-description">
-          <p>Hello, I'm NDATIMANA William, a passionate web developer based in Kigali, Rwanda. With a solid foundation in HTML, CSS, and JavaScript, I specialize in creating engaging and efficient web applications.</p>
+          <p>Hello, I'm NDATIMANA William, a passionate and driven web developer based in Kigali, Rwanda. I specialize in creating engaging web applications.</p>
           <h2>About Me</h2>
-          <p>From a young age, I've been fascinated by technology and its potential to transform the way we live and work. This passion led me to pursue a career in web development.</p>
+          <p>From a young age, I've been fascinated by technology and its potential to transform the way we live and work. This passion led me to pursue a career in web development, combining creativity with technical expertise.</p>
           <h2>My Skills</h2>
           <ul>
             <li>Front-End Development: HTML, CSS, JavaScript</li>
@@ -57,6 +59,15 @@
             <li>Version Control: Git, GitHub</li>
             <li>Tools and Platforms: VS Code, Linux</li>
           </ul>
+          <h2>My Approach</h2>
+          <ul>
+            <li>User-Centric Design</li>
+            <li>Responsive Design</li>
+            <li>Performance Optimization</li>
+            <li>Collaboration</li>
+          </ul>
+          <h2>Let's Connect</h2>
+          <p>Feel free to <a class="contact-button">contact me</a> to discuss a project or opportunity.</p>
         </div>
       </div>
 
@@ -64,23 +75,21 @@
       <div id="work" class="wrapper">
         <i class="fa-solid fa-x close-btn"></i>
         <h1 class="intro-heading">Work</h1>
-        <!-- Projects -->
         <div class="cards">
+          <!-- Example card -->
           <div class="card">
             <div class="image-wrapper">
-              <a href="https://sonarwa.co.rw/" target="_blank">
+              <a href="https://sonarwa.co.rw/" target="_blank" rel="noopener noreferrer">
                 <img src="./image/Sonarwa.png" alt="Sonarwa General Insurance Project" />
               </a>
             </div>
             <div class="card-descr">
               <i class="fa-solid fa-shield-halved"></i>
-              <h2 class="Project_title">
-                <a href="https://sonarwa.co.rw/" target="_blank">Sonarwa General Insurance</a>
-              </h2>
+              <h2 class="Project_title"><a href="https://sonarwa.co.rw/" target="_blank" rel="noopener noreferrer">Sonarwa General Insurance</a></h2>
               <p class="Project-descr">sonarwa.co.rw is a website designed to showcase their insurance services.</p>
             </div>
           </div>
-          <!-- Add other cards like Rehoboth, TechniSup, etc., same as your original -->
+          <!-- Add other project cards as in your original design -->
         </div>
       </div>
 
@@ -95,9 +104,8 @@
         </div>
         <div class="skills">
           <div class="brief">
-            <p>As a frontend developer fluent in HTML, CSS, and JavaScript, with extensive experience in WordPress development, I am deeply committed to life-long learning.</p>
+            <p>I am a front-end developer fluent in HTML, CSS, and JavaScript, passionate about crafting engaging user experiences.</p>
           </div>
-          <!-- Skills icons same as original -->
         </div>
       </div>
 
@@ -137,13 +145,13 @@
 
   <div id="bg"></div>
 
-  <!-- JS -->
+  <!-- Main JS for animations -->
   <script src="main.js"></script>
 
   <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
-    emailjs.init("BGI5QDs9hZrRAsjn_"); // Your Public Key
+    emailjs.init("BGI5QDs9hZrRAsjn_"); // Your public key
 
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', function(event) {
@@ -161,7 +169,7 @@
           contactForm.reset();
         }, function(error) {
           alert('FAILED... Please try again later.');
-          console.error(error);
+          console.error('Email error:', error);
         });
     });
 
