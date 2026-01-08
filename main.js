@@ -6,31 +6,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainWrapper = document.querySelector(".content-wrapper");
   const getBackground = document.getElementById("bg");
 
+  // Landing Content
   const groupedElements = [
     document.querySelector(".top"),
     document.querySelector(".middle"),
     document.querySelector(".bottom"),
-    document.querySelector(".footer"),
+    document.querySelector(".footer")
   ];
 
+  // Navigation
   const getMyNav = [
     document.querySelector(".intro-button"),
     document.querySelector(".work-button"),
     document.querySelector(".about-button"),
-    document.querySelector(".contact-button"),
+    document.querySelector(".contact-button")
   ];
 
+  // Main Sections
   const childrenArray = Array.from(getMainContainer.children);
-
   childrenArray.forEach(child => child.style.display = "none");
 
-  let hideContent = () => {
+  const hideContent = () => {
     getMainContainer.style.opacity = "0";
     getBackground.classList.remove("blur-effect");
     mainWrapper.style.paddingBottom = "0";
-    groupedElements.forEach(element => {
-      element.style.transform = "scale(1)";
-      element.style.opacity = "1";
+    groupedElements.forEach(el => {
+      el.style.transform = "scale(1)";
+      setTimeout(() => { el.style.opacity = "1"; }, 200);
       childrenArray.forEach(child => child.style.display = "none");
     });
   };
@@ -44,13 +46,16 @@ document.addEventListener("DOMContentLoaded", () => {
       event.stopPropagation();
       getMainContainer.style.opacity = "1";
       getBackground.classList.add("blur-effect");
-      groupedElements.forEach(element => element.style.opacity = "0");
-      childrenArray.forEach(child => child.style.display = "none");
+      groupedElements.forEach(el => {
+        el.style.transform = "scale(0.7)";
+        setTimeout(() => { el.style.opacity = "0"; }, 50);
+      });
 
-      if (nav.classList.contains("intro-button")) childrenArray[0].style.display = "block";
-      if (nav.classList.contains("work-button")) childrenArray[1].style.display = "block";
-      if (nav.classList.contains("about-button")) childrenArray[2].style.display = "block";
-      if (nav.classList.contains("contact-button")) childrenArray[3].style.display = "block";
+      let navigationText = nav.textContent.trim();
+      if (navigationText === "Intro") childrenArray[0].style.display = "block";
+      else if (navigationText === "Work") childrenArray[1].style.display = "block";
+      else if (navigationText === "About") childrenArray[2].style.display = "block";
+      else if (navigationText === "Contact") childrenArray[3].style.display = "block";
     });
   });
 
