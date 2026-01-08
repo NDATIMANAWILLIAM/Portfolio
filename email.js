@@ -1,32 +1,31 @@
-<!-- EmailJS -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script type="text/javascript">
-  (function(){
-    emailjs.init("BGI5QDs9hZrRAsjn_"); // your public key
-  })();
+// email.js
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
 
-  const contactForm = document.getElementById('contact-form');
-  const resetBtn = document.getElementById('reset');
-
-  contactForm.addEventListener('submit', function(e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const params = {
-      from_name: document.getElementById('userName').value,
-      email_id: document.getElementById('userEmail').value,
-      message: document.getElementById('userMessage').value
+    // Collect data
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
     };
 
-    emailjs.send('service_6218a88', 'template_bruq7tt', params)
+    // Use EmailJS
+    emailjs.send("service_73c09rg", "template_jifb9tw", data)
       .then(() => {
-        alert('SUCCESS! Your message has been sent.');
-        contactForm.reset();
+        alert("SUCCESS! Your message has been sent.");
+        form.reset();
       })
-      .catch(err => {
-        alert('FAILED... Please try again later.');
-        console.error('EmailJS Error:', err);
+      .catch((err) => {
+        console.error("FAILED...", err);
+        alert("FAILED... Please try again later.");
       });
   });
 
-  resetBtn.addEventListener('click', () => contactForm.reset());
-</script>
+  document.getElementById("reset").addEventListener("click", function () {
+    form.reset();
+  });
+});
