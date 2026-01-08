@@ -1,6 +1,5 @@
-// email.js
 document.addEventListener("DOMContentLoaded", function () {
-  emailjs.init("BGI5QDs9hZrRAsjn_"); // Replace with your public key
+  emailjs.init("BGI5QDs9hZrRAsjn_"); // Your EmailJS public key
 
   const contactForm = document.getElementById('contact-form');
   const resetBtn = document.getElementById('reset');
