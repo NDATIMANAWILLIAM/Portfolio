@@ -1,28 +1,58 @@
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  emailjs.init("BGI5QDs9hZrRAsjn_"); // Your public key
+document.addEventListener("DOMContentLoaded", () => {
+  const introButton = document.querySelector(".intro-button");
+  const workButton = document.querySelector(".work-button");
+  const getMainContainer = document.getElementById("main");
+  const closeButton = document.querySelectorAll(".fa-x");
+  const mainWrapper = document.querySelector(".content-wrapper");
+  const getBackground = document.getElementById("bg");
 
-  const contactForm = document.getElementById('contact-form');
-  contactForm.addEventListener('submit', function(event) {
-    event.preventDefault();
+  const groupedElements = [
+    document.querySelector(".top"),
+    document.querySelector(".middle"),
+    document.querySelector(".bottom"),
+    document.querySelector(".footer"),
+  ];
 
-    const params = {
-      from_name: document.getElementById('userName').value,
-      email_id: document.getElementById('userEmail').value,
-      message: document.getElementById('userMessage').value
-    };
+  const getMyNav = [
+    document.querySelector(".intro-button"),
+    document.querySelector(".work-button"),
+    document.querySelector(".about-button"),
+    document.querySelector(".contact-button"),
+  ];
 
-    emailjs.send('service_73c09rg', 'template_jifb9tw', params)
-      .then(function() {
-        alert('SUCCESS! Your message has been sent.');
-        contactForm.reset();
-      }, function(error) {
-        alert('FAILED... Please try again later.');
-        console.error(error);
-      });
+  const childrenArray = Array.from(getMainContainer.children);
+
+  childrenArray.forEach(child => child.style.display = "none");
+
+  let hideContent = () => {
+    getMainContainer.style.opacity = "0";
+    getBackground.classList.remove("blur-effect");
+    mainWrapper.style.paddingBottom = "0";
+    groupedElements.forEach(element => {
+      element.style.transform = "scale(1)";
+      element.style.opacity = "1";
+      childrenArray.forEach(child => child.style.display = "none");
+    });
+  };
+
+  document.addEventListener("click", (event) => {
+    if (!getMainContainer.contains(event.target)) hideContent();
   });
 
-  document.getElementById('reset').addEventListener('click', function() {
-    contactForm.reset();
+  getMyNav.forEach(nav => {
+    nav.addEventListener("click", (event) => {
+      event.stopPropagation();
+      getMainContainer.style.opacity = "1";
+      getBackground.classList.add("blur-effect");
+      groupedElements.forEach(element => element.style.opacity = "0");
+      childrenArray.forEach(child => child.style.display = "none");
+
+      if (nav.classList.contains("intro-button")) childrenArray[0].style.display = "block";
+      if (nav.classList.contains("work-button")) childrenArray[1].style.display = "block";
+      if (nav.classList.contains("about-button")) childrenArray[2].style.display = "block";
+      if (nav.classList.contains("contact-button")) childrenArray[3].style.display = "block";
+    });
   });
-</script>
+
+  closeButton.forEach(close => close.addEventListener("click", hideContent));
+});
