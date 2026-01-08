@@ -1,5 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-  emailjs.init("BGI5QDs9hZrRAsjn_"); // Your public key
+<!-- EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("BGI5QDs9hZrRAsjn_"); // your public key
+  })();
 
   const contactForm = document.getElementById('contact-form');
   const resetBtn = document.getElementById('reset');
@@ -13,16 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
       message: document.getElementById('userMessage').value
     };
 
-    emailjs.send('service_73c09rg', 'template_jifb9tw', params)
+    emailjs.send('service_6218a88', 'template_bruq7tt', params)
       .then(() => {
         alert('SUCCESS! Your message has been sent.');
         contactForm.reset();
       })
-      .catch((err) => {
+      .catch(err => {
         alert('FAILED... Please try again later.');
-        console.error(err);
+        console.error('EmailJS Error:', err);
       });
   });
 
   resetBtn.addEventListener('click', () => contactForm.reset());
-});
+</script>
