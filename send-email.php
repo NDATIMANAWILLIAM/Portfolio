@@ -1,22 +1,32 @@
+
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $name = $_POST['name'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $message = $_POST['message'] ?? '';
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+  header("Location: index.php?status=error");
+  exit;
+}
 
-    $to = "ndatimanawilliam096@gmail.com";
-    $subject = "New Contact Message";
+$name    = strip_tags(trim($_POST["name"]));
+$email   = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+$message = strip_tags(trim($_POST["message"]));
 
-    $headers = "From: Website <no-reply@yourdomain.com>\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8";
+if (empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  header("Location: index.php?status=error");
+  exit;
+}
 
-    $body = "Name: $name\nEmail: $email\n\n$message";
+$to = "ndatimanawilliam096@gmail.com";
+$subject = "New Contact Form Message";
+$headers = "From: Portfolio <no-reply@" . $_SERVER['SERVER_NAME'] . ">\r\n";
+$headers .= "Reply-To: $email\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8";
 
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Message sent";
-    } else {
-        echo "Mail failed";
-    }
+$body = "Name: $name\n";
+$body .= "Email: $email\n\n";
+$body .= "Message:\n$message\n";
+
+if (mail($to, $subject, $body, $headers)) {
+  header("Location: index.php?status=success");
+} else {
+  header("Location: index.php?status=error");
 }
