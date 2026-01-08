@@ -1,12 +1,8 @@
-// EmailJS Contact Form
-(function() {
-  emailjs.init("YOUR_PUBLIC_KEY"); // replace with your real public key
-})();
+// EmailJS Integration (add at bottom of main.js or after DOMContentLoaded)
+emailjs.init("BGI5QDs9hZrRAsjn_"); // your public key
 
 const contactForm = document.getElementById('contact-form');
-const resetBtn = document.getElementById('reset');
-
-contactForm.addEventListener('submit', function(event) {
+contactForm.addEventListener('submit', function(event){
   event.preventDefault();
 
   const params = {
@@ -15,14 +11,16 @@ contactForm.addEventListener('submit', function(event) {
     message: document.getElementById('userMessage').value
   };
 
-  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', params)
-    .then(function() {
+  emailjs.send('service_73c09rg', 'template_jifb9tw', params)
+    .then(function(){
       alert('SUCCESS! Your message has been sent.');
       contactForm.reset();
-    }, function(error) {
+    }, function(error){
       alert('FAILED... Please try again later.');
       console.error('EmailJS error:', error);
     });
 });
 
-resetBtn.addEventListener('click', () => contactForm.reset());
+document.getElementById('reset').addEventListener('click', function() {
+  contactForm.reset();
+});
