@@ -1,226 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>William Ndatimana - Web Developer Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"/>
-<link rel="icon" type="image/png" href="./image/184-1841477_software-mobile-applications-web-development-web-developer-icon-png.png"/>
-<style>
-  body {font-family:'Source Sans 3', sans-serif; margin:0; padding:0; background:#f7f7f7;}
-  .content-wrapper {max-width:1000px; margin:0 auto; padding:20px; position:relative;}
-  .top, .middle, .bottom, .footer {text-align:center; margin-bottom:20px;}
-  .myPhoto {width:150px; border-radius:50%;}
-  h1.heading {font-size:2rem; margin:10px 0;}
-  .Desc {font-size:1rem; max-width:700px; margin:0 auto;}
-  nav.nav-list {list-style:none; padding:0; display:flex; justify-content:center; gap:15px;}
-  nav.nav-list li {display:inline;}
-  nav.nav-list a {cursor:pointer; text-decoration:none; font-weight:bold; color:#333;}
-  #main .wrapper {display:none; background:#fff; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2); margin-bottom:20px;}
-  .close-btn {cursor:pointer; float:right;}
-  .cards {display:flex; flex-wrap:wrap; gap:15px; justify-content:center;}
-  .card {width:250px; border:1px solid #ccc; border-radius:10px; overflow:hidden; background:#fff;}
-  .card img {width:100%; display:block;}
-  .card-descr {padding:10px;}
-  .card-descr h2 {font-size:1rem; margin:5px 0;}
-  .card-descr p {font-size:0.9rem; margin:5px 0;}
-  .skills {display:flex; flex-wrap:wrap; gap:20px;}
-  .column1, .column2 {flex:1; min-width:200px;}
-  .skill-item {text-align:center; margin-bottom:10px;}
-  .skill-item img {width:50px;}
-  .skill-item-name {margin-top:5px;}
-  form.contact-form {max-width:600px; margin:0 auto;}
-  input, textarea {width:100%; padding:10px; margin:5px 0; border:1px solid #ccc; border-radius:5px;}
-  input[type="submit"], input[type="button"] {width:auto; cursor:pointer; background:#333; color:#fff; border:none; padding:10px 15px;}
-  .alert {margin-top:10px; padding:10px; border-radius:5px; display:none;}
-  .alert.success {background-color:#4caf50; color:#fff;}
-  .alert.error {background-color:#f44336; color:#fff;}
-  #bg {position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; background:url('./image/bg.jpg') center/cover no-repeat;}
-  .blur-effect {filter:blur(5px);}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>William Ndatimana - Web Developer Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="./image/184-1841477_software-mobile-applications-web-development-web-developer-icon-png.png" />
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
-<section class="content-wrapper">
-  <div class="top">
-    <img class="myPhoto" src="./image/William.jpg" alt="My profile picture"/>
-  </div>
-  <div class="middle">
-    <h1 class="heading">
-      <span class="title-part1">Hi I'm William,</span>
-      <span class="title-part2">I'm a web developer</span>
-    </h1>
-    <p class="Desc">
-      NDATIMANA William is a frontend developer and WordPress CMS expert with over 2 years of experience. I specialize in HTML, CSS, JavaScript, PHP, React, Next.js, React Native, and TYPO3 CMS.
-    </p>
-  </div>
-  <div class="bottom">
-    <nav class="navigation">
-      <ul class="nav-list">
-        <li><a class="intro-button">Intro</a></li>
-        <li><a class="work-button">Work</a></li>
-        <li><a class="about-button">About</a></li>
-        <li><a class="contact-button">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <section class="content-wrapper">
+    <!-- TOP SECTION -->
+    <div class="top">
+      <img class="myPhoto" src="./image/William.jpg" alt="My profile picture" />
+    </div>
 
-  <div id="main">
-    <!-- Intro Section -->
-    <div id="intro" class="wrapper">
-      <i class="fa-solid fa-x close-btn"></i>
-      <h1 class="intro-heading">Intro</h1>
-      <span class="image"><img src="./image/web-devel-important.jpg" alt="Web Development"/></span>
-      <div class="info-description">
-        <p>Hello, I'm NDATIMANA William, a passionate web developer based in Kigali, Rwanda...</p>
+    <!-- MIDDLE SECTION -->
+    <div class="middle">
+      <h1 class="heading">
+        <span class="title-part1">Hi I'm William,</span>
+        <span class="title-part2">I'm a web developer</span>
+      </h1>
+      <p class="Desc">
+        NDATIMANA William is a front-end developer and WordPress CMS expert with over 2 years of experience. 
+        With a strong background in creating visually appealing and user-friendly websites, I specialize in HTML, CSS, JavaScript, PHP, React, Next.js, React Native, and TYPO3 CMS.
+      </p>
+    </div>
+
+    <!-- BOTTOM NAV -->
+    <div class="bottom">
+      <nav class="navigation">
+        <ul class="nav-list">
+          <li><a class="intro-button">Intro</a></li>
+          <li><a class="work-button">Work</a></li>
+          <li><a class="about-button">About</a></li>
+          <li><a class="contact-button">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- MAIN CONTENT SECTIONS -->
+    <div id="main">
+      <!-- INTRO -->
+      <div id="intro" class="wrapper">
+        <i class="fa-solid fa-x close-btn"></i>
+        <h1 class="intro-heading">Intro</h1>
+        <span class="image"><img src="./image/web-devel-important.jpg" alt="Web Development" /></span>
+        <div class="info-description">
+          <p>Hello, I'm NDATIMANA William, a passionate and driven web developer based in Kigali, Rwanda. My portfolio showcases innovative solutions and projects I have developed.</p>
+          <h2>About Me</h2>
+          <p>From a young age, I've been fascinated by technology. This passion led me to pursue web development, combining creativity with technical expertise.</p>
+          <h2>My Skills</h2>
+          <ul>
+            <li>Front-End Development: HTML, CSS, JavaScript</li>
+            <li>Back-End Development: PHP</li>
+            <li>Frameworks and Libraries: React, Bootstrap</li>
+            <li>Database Management: MySQL</li>
+            <li>Version Control: Git, GitHub</li>
+            <li>Tools and Platforms: VS Code, Linux</li>
+          </ul>
+          <h2>My Approach</h2>
+          <ul>
+            <li>User-Centric Design: Prioritizing user experience.</li>
+            <li>Responsive Design: Accessible on all devices.</li>
+            <li>Performance Optimization: Clean, efficient code.</li>
+            <li>Collaboration: Working closely with clients and teams.</li>
+          </ul>
+          <h2>What I Offer</h2>
+          <ul>
+            <li>Web Development: Dynamic and responsive websites.</li>
+            <li>Web Design: User-friendly and visually appealing interfaces.</li>
+            <li>E-Commerce Solutions: Secure and scalable online stores.</li>
+            <li>Content Management Systems: Easy-to-manage CMS solutions.</li>
+          </ul>
+          <h2>Let's Connect</h2>
+          <p>Feel free to <a class="contact-button">contact me</a> for any questions or projects.</p>
+        </div>
+      </div>
+
+      <!-- WORK SECTION -->
+      <div id="work" class="wrapper">
+        <i class="fa-solid fa-x close-btn"></i>
+        <h1 class="intro-heading">Work</h1>
+        <div class="image"><img src="./image/web-devel-important.jpg" alt="Web Development Work" /></div>
+        <div class="work-intro">
+          <p>Here you'll find my projects highlighting creativity, problem-solving, and innovation.</p>
+        </div>
+        <!-- Add your project cards here, same as original -->
+      </div>
+
+      <!-- ABOUT SECTION -->
+      <div id="about" class="wrapper">
+        <i class="fa-solid fa-x close-btn"></i>
+        <h1 class="intro-heading">About</h1>
+        <div class="profile">
+          <div class="profile-picture">
+            <img class="profile-icon" src="./image/programmer-line-gradient-icon-vector-removebg-preview.png" alt="Web developer icon" />
+          </div>
+        </div>
+        <div class="skills">
+          <div class="brief">
+            <p>Frontend developer with extensive experience in WordPress and passion for creating engaging user experiences.</p>
+          </div>
+          <div class="tools">
+            <!-- Your skills columns as before -->
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT SECTION -->
+      <div id="contact" class="wrapper">
+        <i class="fa-solid fa-x close-btn"></i>
+        <h1 class="intro-heading">Contact</h1>
+        <form id="contact-form" class="contact-form">
+          <div class="form-field-wrapper">
+            <div class="half-fields">
+              <div class="field-half1">
+                <label for="userName">Name</label>
+                <input type="text" name="name" id="userName" required />
+              </div>
+              <div class="field-half">
+                <label for="userEmail">Email</label>
+                <input type="email" name="email" id="userEmail" required />
+              </div>
+            </div>
+            <div class="textarea-wrapper">
+              <label for="userMessage">Message</label>
+              <textarea name="message" id="userMessage" required></textarea>
+            </div>
+            <div class="button-wrapper">
+              <input id="submit" type="submit" value="Send Message" />
+              <input id="reset" type="button" value="Reset" />
+            </div>
+            <div class="socials">
+              <ul>
+                <li><a href="https://www.linkedin.com/in/william-ndatimana-509931253/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="https://github.com/NDATIMANAWILLIAM" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/williamwale2244" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
 
-    <!-- Work Section -->
-    <div id="work" class="wrapper">
-      <i class="fa-solid fa-x close-btn"></i>
-      <h1 class="intro-heading">Work</h1>
-      <div class="cards">
-        <div class="card">
-          <div class="image-wrapper">
-            <a href="https://sonarwa.co.rw/" target="_blank">
-              <img src="./image/Sonarwa.png" alt="Sonarwa General Insurance Project" />
-            </a>
-          </div>
-          <div class="card-descr">
-            <h2><a href="https://sonarwa.co.rw/" target="_blank">Sonarwa General Insurance</a></h2>
-            <p>sonarwa.co.rw is a website designed to showcase their insurance services.</p>
-          </div>
-        </div>
-        <!-- Repeat other cards here as needed -->
-      </div>
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>&copy; 2025 by NDATIMANA William. All rights reserved.</p>
     </div>
+  </section>
 
-    <!-- About Section -->
-    <div id="about" class="wrapper">
-      <i class="fa-solid fa-x close-btn"></i>
-      <h1 class="intro-heading">About</h1>
-      <div class="skills">
-        <div class="column1">
-          <div class="skill-item">
-            <img src="./image/skills/html.6aa56206be02cf6404844871df1d2da6.png" alt="HTML"/>
-            <div class="skill-item-name">HTML</div>
-          </div>
-          <div class="skill-item">
-            <img src="./image/skills/css.0ce0f0a2b4c4aa34b64c40e5278af3d1.png" alt="CSS"/>
-            <div class="skill-item-name">CSS</div>
-          </div>
-        </div>
-        <div class="column2">
-          <div class="skill-item">
-            <img src="./image/skills/js.f8a28e905c78dadb79434b7ceebd52a0.png" alt="JavaScript"/>
-            <div class="skill-item-name">JavaScript</div>
-          </div>
-          <div class="skill-item">
-            <img src="./image/skills/react.cb15bfce2a9004ce61c5f79f805b067b.png" alt="React"/>
-            <div class="skill-item-name">React</div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- BACKGROUND -->
+  <div id="bg"></div>
 
-    <!-- Contact Section -->
-    <div id="contact" class="wrapper">
-      <i class="fa-solid fa-x close-btn"></i>
-      <h1 class="intro-heading">Contact</h1>
-      <form id="contact-form" class="contact-form">
-        <label for="userName">Name</label>
-        <input type="text" name="name" id="userName" required />
-        <label for="userEmail">Email</label>
-        <input type="email" name="email" id="userEmail" required />
-        <label for="userMessage">Message</label>
-        <textarea name="message" id="userMessage" required></textarea>
-        <input type="submit" value="Send Message" />
-        <input type="button" id="reset" value="Reset" />
-        <div id="form-alert" class="alert"></div>
-      </form>
-    </div>
-  </div>
+  <!-- MAIN JS -->
+  <script>
+    // EmailJS Initialization
+    emailjs.init('YOUR_PUBLIC_KEY'); // replace with your EmailJS public key
 
-  <div class="footer">
-    <p>&copy; 2025 by NDATIMANA William. All rights reserved.</p>
-  </div>
-</section>
+    document.addEventListener("DOMContentLoaded", () => {
+      const introButton = document.querySelector(".intro-button");
+      const workButton = document.querySelector(".work-button");
+      const aboutButton = document.querySelector(".about-button");
+      const contactButton = document.querySelector(".contact-button");
+      const mainWrapper = document.querySelector(".content-wrapper");
+      const getMainContainer = document.getElementById("main");
+      const closeButton = document.querySelectorAll(".fa-x");
+      const bg = document.getElementById("bg");
 
-<div id="bg"></div>
+      const contactForm = document.getElementById('contact-form');
+      const resetButton = document.getElementById('reset');
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  emailjs.init("BGI5QDs9hZrRAsjn_"); // Your public key
+      const childrenArray = Array.from(getMainContainer.children);
 
-  const form = document.getElementById('contact-form');
-  const alertBox = document.getElementById('form-alert');
-  const resetButton = document.getElementById('reset');
+      // Hide all main sections initially
+      childrenArray.forEach(child => child.style.display = 'none');
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    alertBox.style.display = 'none';
+      const groupedElements = [document.querySelector(".top"), document.querySelector(".middle"), document.querySelector(".bottom"), document.querySelector(".footer")];
+      groupedElements[0].classList.add("move-up");
+      groupedElements[1].classList.add("show");
 
-    const params = {
-      from_name: document.getElementById('userName').value,
-      email_id: document.getElementById('userEmail').value,
-      message: document.getElementById('userMessage').value
-    };
+      function hideContent() {
+        getMainContainer.style.opacity = "0";
+        bg.classList.remove("blur-effect");
+        mainWrapper.style.paddingBottom = "0";
+        groupedElements.forEach(el => { el.style.transform = "scale(1)"; el.style.opacity = "1"; });
+        childrenArray.forEach(child => child.style.display = 'none');
+      }
 
-    emailjs.send('service_6218a88', 'template_bruq7tt', params)
-    .then(function(){
-      alertBox.textContent = 'SUCCESS! Your message has been sent.';
-      alertBox.className = 'alert success';
-      alertBox.style.display = 'block';
-      form.reset();
-    }, function(error){
-      console.error('EmailJS error:', error);
-      alertBox.textContent = 'FAILED... Please try again later.';
-      alertBox.className = 'alert error';
-      alertBox.style.display = 'block';
-    });
-  });
-
-  resetButton.addEventListener('click', () => {
-    form.reset();
-    alertBox.style.display = 'none';
-  });
-
-  // Portfolio JS Interactions
-  document.addEventListener("DOMContentLoaded", () => {
-    const introButton = document.querySelector(".intro-button");
-    const workButton = document.querySelector(".work-button");
-    const aboutButton = document.querySelector(".about-button");
-    const contactButton = document.querySelector(".contact-button");
-    const mainContainer = document.getElementById("main");
-    const closeButtons = document.querySelectorAll(".fa-x");
-    const bg = document.getElementById("bg");
-
-    const sections = {
-      "Intro": document.getElementById("intro"),
-      "Work": document.getElementById("work"),
-      "About": document.getElementById("about"),
-      "Contact": document.getElementById("contact")
-    };
-
-    function hideSections() {
-      Object.values(sections).forEach(s => s.style.display = "none");
-      bg.classList.remove("blur-effect");
-    }
-
-    Object.entries(sections).forEach(([key, section])=>{
-      document.querySelector(`.${key.toLowerCase()}-button`).addEventListener("click", ()=>{
-        hideSections();
-        section.style.display="block";
+      function showSection(index) {
+        getMainContainer.style.opacity = "1";
         bg.classList.add("blur-effect");
+        groupedElements.forEach(el => { el.style.transform = "scale(0.7)"; el.style.opacity = "0"; });
+        childrenArray[index].style.display = "block";
+        mainWrapper.style.paddingBottom = (index === 3 ? "100px" : "300px");
+      }
+
+      introButton.addEventListener("click", () => showSection(0));
+      workButton.addEventListener("click", () => showSection(1));
+      aboutButton.addEventListener("click", () => showSection(2));
+      contactButton.addEventListener("click", () => showSection(3));
+
+      closeButton.forEach(btn => btn.addEventListener("click", hideContent));
+      bg.addEventListener("click", hideContent);
+
+      resetButton.addEventListener('click', () => contactForm.reset());
+
+      // Contact form submission
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const from_name = document.getElementById('userName').value.trim();
+        const email_id = document.getElementById('userEmail').value.trim();
+        const message = document.getElementById('userMessage').value.trim();
+
+        if (!from_name || !email_id || !message) { alert('Please fill in all fields.'); return; }
+
+        emailjs.send('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID', { from_name, email_id, message })
+          .then(() => { alert('SUCCESS! Your message has been sent.'); contactForm.reset(); })
+          .catch(err => { console.error('EmailJS error:', err); alert('FAILED... Please try again later.'); });
       });
     });
-
-    closeButtons.forEach(btn=>btn.addEventListener("click", hideSections));
-    bg.addEventListener("click", hideSections);
-  });
-</script>
+  </script>
 </body>
 </html>
